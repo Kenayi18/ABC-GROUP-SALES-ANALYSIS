@@ -10,6 +10,55 @@ The dataset used for this report is "ABC_Dataset.xlsx"
 ### Tools
 Power BI Desktop [Free Download](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
 
+### Data Cleaning and Preparation
+I began by importing the dataset into Power Bi's Query editor for data cleaning and transformation, a seperate Calendar table was created by dublicating the order table and using the orderdate column alone to create a new calendar table.
+
+### Modelling
+Power BI automatically detected and established relationships between all the tables, except for the Date table. I manually created this relationship by linking 'Order' orderdate to 'Calendar' orderdate in Power BI's Model view.
+
+### Calculated Columns
+FullName = Employee[Title]&" "&Employee[FirstName]&" "&Employee[LastName]
+
+Cost = RELATED(Products[UbitCost])
+
+Price = RELATED(Products[UnitPrice])
+
+TotalCost = 'Order'[Cost]*'Order'[Quantity]
+
+Total Sales = 'Order'[Quantity]*'Order'[Price]
+
+Income Group = IF(Customers[AnnualIncome] <= 30000, "Low",
+                IF(Customers[AnnualIncome] <= 50000, "Medium",
+                IF(Customers[AnnualIncome] <= 80000, "High",
+                "Very High")))
+                
+New Colour = IF(Products[ProductColor] = BLANK(), "No Colour", Products[ProductColor])
+
+### Measures
+Revenue = SUM('Order'[Total Sales])
+
+Total_Cost = SUM('Order'[TotalCost])
+
+Average Revenue = AVERAGE('Order'[Total Sales])
+
+Average Cost = AVERAGE('Order'[TotalCost])
+
+Profit = [Revenue] - [Total_Cost]
+
+Previous Year Sales = CALCULATE(SUM('Order'[Total Sales]),
+                    SAMEPERIODLASTYEAR('Calendar'[Dates]))
+                    
+% Variance = DIVIDE([Revenue]-[Previous Year Sales],[Previous Year Sales])
+
+Cumulative_Revenue = CALCULATE(SUM('Order'[Total Sales]),
+              Filter(ALL('Calendar'),
+              'Calendar'[Dates] <= MAX('Calendar'[Dates])))
+
+TotalCost = SUMX('Order','Order'[Price]*'Order'[Quantity])
+
+### Report
+[View Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
+
 
 
 
