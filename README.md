@@ -56,7 +56,7 @@ Cumulative_Revenue = CALCULATE(SUM('Order'[Total Sales]),
 
 TotalCost = SUMX('Order','Order'[Price]*'Order'[Quantity])
 
-### Report
+### Final Report
 [View Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
 
 
