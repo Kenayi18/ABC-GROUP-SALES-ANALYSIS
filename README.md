@@ -4,8 +4,12 @@
 You’ve just been hired by ABC GROUP, a fictional global manufacturing company, to design and deliver an end-to-end business intelligence solution – from scratch!
 The Business needs a way to track KPIs (Cost, Revenue, profit), compare current year against previous year sales, Visualise revenue by continent and country, profit by Category and cumulative revenue todate.
 
+![ABC_Shot](https://github.com/Kenayi18/ABC-GROUP-SALES-ANALYSIS/assets/173837738/8dcefc98-2689-40c3-b40c-3d21a21c5698)  [View Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
+
+
+
 ### Dataset
-The dataset used for this report is "ABC_Dataset.xlsx"
+The fictional dataset used for this report "ABC Dataset.xlsx" can be found on this page.
 
 ### Tools
 Power BI Desktop [Free Download](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
