@@ -6,8 +6,6 @@ The Business needs a way to track KPIs (Cost, Revenue, profit), compare current 
 
 ![ABC_Shot](https://github.com/Kenayi18/ABC-GROUP-SALES-ANALYSIS/assets/173837738/8dcefc98-2689-40c3-b40c-3d21a21c5698)  [View Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
 
-
-
 ### Dataset
 The fictional dataset used for this report "ABC Dataset.xlsx" can be found on this page.
 
@@ -61,7 +59,12 @@ Cumulative_Revenue = CALCULATE(SUM('Order'[Total Sales]),
 TotalCost = SUMX('Order','Order'[Price]*'Order'[Quantity])
 
 ### Final Report
-[View Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
+[View The Interactive Report Here](https://app.powerbi.com/reportEmbed?reportId=dcccbc40-a3c9-4a52-a9da-335efbee78b0&autoAuth=true&ctid=516d080c-5b7a-4154-ba3a-5404fc5e59cc)
+
+### References
+1. [Power BI Forums](https://community.fabric.microsoft.com/t5/Power-BI-forums/ct-p/powerbi)
+2. [Google search](https://www.google.com/)
+3. [Youtube](https://www.youtube.com/)
 
 
 
